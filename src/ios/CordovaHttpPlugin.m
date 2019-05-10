@@ -294,6 +294,8 @@
 
     CordovaHttpPlugin* __weak weakSelf = self;
     manager.responseSerializer = [TextResponseSerializer serializer];
+    // accept all content-types
+    manager.responseSerializer.acceptableContentTypes = nil;
     [[SDNetworkActivityIndicator sharedActivityIndicator] startActivity];
 
     @try {
